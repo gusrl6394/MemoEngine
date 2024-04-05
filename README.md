@@ -20,6 +20,12 @@
 - 댓글(BoardCommentControl.ascx)
 ```
 
+### 추가
+```
+- 쿼리문은 별도의 MSSQL 프로시저를 통해 CRUD 구현
+- 커스텀된 외부의 DDL 파일 적용  
+```
+
 ### 게시판 리스트
 ![스크린샷 2024-04-06 000138](https://github.com/gusrl6394/MemoEngine/assets/20663508/43e70da8-599b-4d8a-b163-8488190ce590)
 
