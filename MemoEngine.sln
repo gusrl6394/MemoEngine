@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoEngine", "MemoEngine\MemoEngine.csproj", "{065E85E9-51CE-4E73-8D87-4BD42C6BC567}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DotNetNote.Database", "DotNetNote.Database\DotNetNote.Database.sqlproj", "{4E4299B3-6297-4999-8A9B-F78E02671E6C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dul", "..\Dul\Dul\Dul.csproj", "{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DotNetNote.Database", "DotNetNote.Database\DotNetNote.Database.sqlproj", "{4E4299B3-6297-4999-8A9B-F78E02671E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +19,16 @@ Global
 		{065E85E9-51CE-4E73-8D87-4BD42C6BC567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{065E85E9-51CE-4E73-8D87-4BD42C6BC567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{065E85E9-51CE-4E73-8D87-4BD42C6BC567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E4299B3-6297-4999-8A9B-F78E02671E6C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42DE8D76-87C1-4833-ADE0-4DF4B6FB4C78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

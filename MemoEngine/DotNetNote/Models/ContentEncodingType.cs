@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace DotNetNote.Models
+﻿namespace DotNetNote.Models
 {
     /// <summary>
     /// 게시판의 글 내용(Content)의 인코딩 처리 방식 
