@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BoardList.aspx.cs" Inherits="MemoEngine.DotNetNote.BoardList" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BoardList.aspx.cs" Inherits="MemoEngine.DotNetNote.BoardList" %>
 
 <%@ Register 
     Src="~/DotNetNote/Controls/BoardSearchFormSingleControl.ascx" 
@@ -10,7 +10,7 @@
     <h2 style="text-align: center;">게시판</h2>
     <span style="color: #ff0000">글 목록 - 완성형 게시판입니다.</span>
     <hr />
-    <table style="width: 750px; margin-left: auto; margin-right: auto;">
+    <table style="width: 900px; margin-left: auto; margin-right: auto;">
         <tr>
             <td>
                 <style>
