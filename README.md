@@ -25,3 +25,9 @@
 
 ### 게시판 뷰
 ![스크린샷 2024-04-06 000149](https://github.com/gusrl6394/MemoEngine/assets/20663508/f945bd9d-1252-450e-92f0-be4407c52349)
+
+### 이미지 첨부된 게시판 리스트
+![스크린샷 2024-04-06 001043](https://github.com/gusrl6394/MemoEngine/assets/20663508/6e7cb294-3994-4ee6-a4dc-1cad9b2d110a)
+
+### 이미지 첨부된 게시판 뷰
+![스크린샷 2024-04-06 001102](https://github.com/gusrl6394/MemoEngine/assets/20663508/ac01acfa-6bcd-46ab-a791-9628065690fe)
