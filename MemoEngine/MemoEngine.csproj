@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MemoEngine</RootNamespace>
     <AssemblyName>MemoEngine</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44312</IISExpressSSLPort>
@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.6.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
     </Reference>
@@ -54,9 +57,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -67,9 +70,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
@@ -157,18 +157,27 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DotNetNote\BoardCommentDelete.aspx" />
+    <Content Include="DotNetNote\BoardDelete.aspx" />
     <Content Include="DotNetNote\BoardDown.aspx" />
     <Content Include="DotNetNote\BoardList.aspx" />
+    <Content Include="DotNetNote\BoardModify.aspx" />
+    <Content Include="DotNetNote\BoardReply.aspx" />
+    <Content Include="DotNetNote\BoardView.aspx" />
     <Content Include="DotNetNote\BoardWrite.aspx" />
     <Content Include="DotNetNote\Controls\AdvancedPagingSingleWithBootstrap.ascx" />
+    <Content Include="DotNetNote\Controls\BoardCommentControl.ascx" />
     <Content Include="DotNetNote\Controls\BoardEditorFormControl.ascx" />
     <Content Include="DotNetNote\Controls\BoardSearchFormSingleControl.ascx" />
     <Content Include="DotNetNote\ImageDown.aspx" />
     <Content Include="DotNetNote\ImageText.aspx" />
     <Content Include="DotNetNote\ThumbNail.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\dnn\blank.gif" />
     <Content Include="images\dnn\commentcount.gif" />
@@ -288,6 +297,12 @@
     <Content Include="images\ext\ext_xml.gif" />
     <Content Include="images\ext\ext_xml_.gif" />
     <Content Include="images\ext\ext_zip.gif" />
+    <None Include=".editorconfig" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -316,11 +331,11 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -375,6 +390,20 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DotNetNote\BoardCommentDelete.aspx.cs">
+      <DependentUpon>BoardCommentDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardCommentDelete.aspx.designer.cs">
+      <DependentUpon>BoardCommentDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardDelete.aspx.cs">
+      <DependentUpon>BoardDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardDelete.aspx.designer.cs">
+      <DependentUpon>BoardDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DotNetNote\BoardDown.aspx.cs">
       <DependentUpon>BoardDown.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,6 +419,27 @@
       <DependentUpon>BoardList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\MaximServiceController.cs" />
+    <Compile Include="DotNetNote\BoardModify.aspx.cs">
+      <DependentUpon>BoardModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardModify.aspx.designer.cs">
+      <DependentUpon>BoardModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardReply.aspx.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardReply.aspx.designer.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\BoardView.aspx.cs">
+      <DependentUpon>BoardView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\BoardView.aspx.designer.cs">
+      <DependentUpon>BoardView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DotNetNote\BoardWrite.aspx.cs">
       <DependentUpon>BoardWrite.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,6 +453,13 @@
     </Compile>
     <Compile Include="DotNetNote\Controls\AdvancedPagingSingleWithBootstrap.ascx.designer.cs">
       <DependentUpon>AdvancedPagingSingleWithBootstrap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DotNetNote\Controls\BoardCommentControl.ascx.cs">
+      <DependentUpon>BoardCommentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DotNetNote\Controls\BoardCommentControl.ascx.designer.cs">
+      <DependentUpon>BoardCommentControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="DotNetNote\Controls\BoardEditorFormControl.ascx.cs">
       <DependentUpon>BoardEditorFormControl.ascx</DependentUpon>
@@ -480,8 +537,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
